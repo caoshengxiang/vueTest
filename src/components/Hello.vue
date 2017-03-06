@@ -17,19 +17,51 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+
+
+    <div v-demo="{a: 1}"></div>
+      <button @click="click(123)">123</button>
+
+      <a1 :pa1='a1' v-on:emit-a1="emitData"></a1>
+      <a2></a2>
   </div>
 </template>
 
 <script>
-  import myMixin from '../util/mixin'
+//  import myMixin from '../util/mixin'
+import a1 from '../pages/a1.vue'
+import a2 from '../pages/a2.vue'
 export default {
   name: 'hello',
-    mixins: [myMixin],
+//    mixins: [myMixin],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+        a1: [1,2],
+        emitA1: 0,
     }
-  }
+  },
+    components: {
+      a1,
+      a2,
+    },
+    mounted() {
+//      this.globalMethod();
+       this.$myMethod();
+    },
+    methods: {
+       click(n) {
+           alert(n)
+        },
+        emitData(data) {
+           this.emitA1 = data;
+        }
+    },
+    events: {
+      'emit-a1'() {
+          alert()
+      }
+    }
 }
 </script>
 <!--  -->

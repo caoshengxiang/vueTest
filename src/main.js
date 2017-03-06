@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import MyPlugin from './components/my_plugin/my_plugin'
+
+Vue.use(MyPlugin)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
