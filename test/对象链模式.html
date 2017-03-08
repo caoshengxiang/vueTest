@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象链模式</title>
+</head>
+<body>
+
+</body>
+<script>
+  var obj = {
+      value: 1,
+      add: function (v) {
+          this.value += v;
+          return this; // 当创建的方法其返回值无任何意义时，可以返回一个this，可实现链式调用
+      },
+      shout: function () {
+          console.info("value:" + this.value)
+      }
+  }
+
+  // 链式调用调用
+
+    obj.add(5).shout();
+
+  // 逐个调用
+    obj.add(5);
+    obj.shout();
+
+
+
+    var Person = function (name) {
+        this.name = name;
+    }.
+    method('getName', function () {
+        return this.name;
+    });
+
+    var p = new Person("allen");
+    p.getName();
+//    a.setName("june").getName();
+</script>
+</html>
