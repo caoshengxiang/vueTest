@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from 'components/Hello'
 import eventBus from '../pages/eventBus/main.vue'
-
+import vuexTest from '../pages/vuex_test/main.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +21,11 @@ export default new Router({
       path: '/event_bus',
       name: 'eventBus',
       component: eventBus
+    },
+    {
+      path: '/vuex_test',
+      name: 'vuexTest',
+      component: vuexTest
     }
   ]
 })
