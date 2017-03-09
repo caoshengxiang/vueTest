@@ -5,21 +5,19 @@
   </div>
 </template>
 <script>
-  import bus from '../bus/bus'
+  import bus from '../../bus/bus'
   export default {
     name: 'A1',
     props: {
-      pa1: {
-        default: [],
-        type: Array
-      }
+
     },
     created() {
-      this.$emit("emit-a1", 1)
+
     },
     methods: {
       click() {
-        bus.$emit('eventBus', 'event bus');
+        bus.$emit('eventBus', 'emit event bus at a2.vue');
+        bus.$emit('eventBus2', 'emit event bus at a3.vue');
       }
     }
   }

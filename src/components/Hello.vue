@@ -56,11 +56,6 @@ export default {
         emitData(data) {
            this.emitA1 = data;
         }
-    },
-    events: {
-      'emit-a1'() {
-          alert()
-      }
     }
 }
 </script>

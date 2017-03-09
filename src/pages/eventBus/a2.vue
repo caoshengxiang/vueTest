@@ -2,16 +2,16 @@
   <div>
     a2
     <br>
-    <v3></v3>
+    <a3></a3>
   </div>
 </template>
 <script>
-  import bus from '../bus/bus'
-  import v3 from './v3.vue'
+  import bus from '../../bus/bus'
+  import a3 from './a3.vue'
   export default {
     name: 'A2',
     components: {
-      v3
+      a3,
     },
     created() {
       bus.$on('eventBus', (id) => {

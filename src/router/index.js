@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from 'components/Hello'
+import eventBus from '../pages/eventBus/main.vue'
 
 Vue.use(Router)
 
@@ -12,9 +13,14 @@ export default new Router({
       component: Hello
     },
     {
-    	path: 'test',
+    	path: '/test',
     	name: 'test',
     	component: Hello
+    },
+    {
+      path: '/event_bus',
+      name: 'eventBus',
+      component: eventBus
     }
   ]
 })
