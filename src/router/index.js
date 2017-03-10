@@ -8,43 +8,35 @@ Vue.use(Router)
 // import vuexTest from '../pages/vuex_test/main.vue'
 // import index from '../pages/index.vue'
 
+// const Hello = resolve => require(['components/Hello.vue'], resolve)
+const eventBus = resolve => require(['../pages/eventBus/main.vue'], resolve)
+const vuexTest = resolve => require(['../pages/vuex_test/main.vue'], resolve)
+const index = resolve => require(['../pages/index.vue'], resolve)
+
+const Hello = resolve => require.ensure([], () => resolve(require('components/Hello.vue')), 'hello')
+
+
 export default new Router({
   routes: [
     {
       path: '',
       name: 'index',
-      component: function (resolve) {
-        require.ensure([], function () {
-          resolve(require('../pages/index.vue'))
-        }, 'index')
-      }
+      component: index
     },
     {
       path: '/test',
       name: 'test',
-      component: function (resolve) {
-        require.ensure([], function () {
-          resolve(require('../components/Hello.vue'))
-        }, 'test')
-      }
+      component: Hello
     },
     {
       path: '/event_bus',
       name: 'eventBus',
-      component: function (resolve) {
-        require.ensure([], function () {
-          resolve(require('../pages/eventBus/main.vue'))
-        }, 'eventBus')
-      }
+      component: eventBus
     },
     {
       path: '/vuex_test',
       name: 'vuexTest',
-      component: function (resolve) {
-        require.ensure([], function () {
-          resolve(require('../pages/vuex_test/main.vue'))
-        }, 'vuexTest')
-      }
+      component: vuexTest
     }
   ]
 })
