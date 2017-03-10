@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import store from './state/index'
+import store from './state' // vuex 会自动加载目录下的index
 import App from './App'
 import router from './router'
 
@@ -18,5 +18,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

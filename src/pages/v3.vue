@@ -1,13 +1,13 @@
 <template>
-    <div>
-        a3
-    </div>
+  <div>
+    a3
+  </div>
 </template>
 <script>
-export default {
+  export default {
     name: "V3",
 
-}
+  }
 </script>
 <style>
 </style>

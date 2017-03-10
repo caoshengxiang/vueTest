@@ -13,9 +13,9 @@
       }
     },
     created() {
-        var self = this;
+      var self = this;
       bus.$on('eventBus2', (id) => {
-          self.show = id;
+        self.show = id;
       })
     }
   }

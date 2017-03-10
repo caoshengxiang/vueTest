@@ -6,18 +6,15 @@ Vue.use(Vuex)
 import mutations from './mutations'
 import getters from './getters'
 import actions from './actions'
-import md1 from './modules/md1'  // 引入时会自动寻找index
+
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    countMd1: 10
   },
   mutations,
   getters,
-  actions,
-  modules: {
-    md1
-  }
+  actions
 })
 
 export default store;

@@ -8,9 +8,7 @@
   import bus from '../../bus/bus'
   export default {
     name: 'A1',
-    props: {
-
-    },
+    props: {},
     created() {
 
     },

@@ -1,14 +1,14 @@
 <template>
   <div>
-      <h1>event bus</h1>
-      <div>
-        <div class="a1">
-          <a1></a1>
-        </div>
-        <div class="a2">
-          <a2></a2>
-        </div>
+    <h1>event bus</h1>
+    <div>
+      <div class="a1">
+        <a1></a1>
       </div>
+      <div class="a2">
+        <a2></a2>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -18,9 +18,7 @@
     name: 'main',
     props: {},
     data() {
-        return {
-
-        }
+      return {}
     },
     components: {
       a1,
@@ -34,10 +32,11 @@
 </script>
 <style>
   .a1 {
-      margin: 30px auto;
+    margin: 30px auto;
     padding: 20px;
-      border: 1px solid #ccc;
+    border: 1px solid #ccc;
   }
+
   .a2 {
     margin: 30px auto;
     padding: 20px;
