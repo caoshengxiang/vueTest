@@ -7,6 +7,10 @@ app.get('/', function (req, res) {
   res.sendFile( __dirname + "/" + "dist/index.html" );
 })
 
+app.get('/user', function (req, res) {
+  res.json({name: 'allen', age: 18})
+})
+
 var server = app.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;

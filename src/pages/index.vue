@@ -21,7 +21,20 @@
     computed: {},
     computed: {},
     methods: {
-
+      getData() {
+        var xml = new XMLHttpRequest();
+        xml.open('get', 'http://localhost:3000/user', true)
+        xml.send()
+        xml.onreadystatechange =function () {
+          if (xml.readyState == 4 && xml.status == 200) {
+            alert()
+//            document.getElementById('app').innerHTML = xml.responseText;
+            console.log(xml.responseText, '请求数据')
+          } else {
+            alert('err')
+          }
+        }
+      }
     },
     components: {},
     beforeCreate(){
@@ -35,6 +48,9 @@
 
       // indexedDB
 //        require('../util/indexDB')
+
+      this.getData()
+
     },
     beforeMount() {
     },
