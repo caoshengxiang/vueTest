@@ -19,7 +19,6 @@
       }
     },
     computed: {},
-    computed: {},
     methods: {
       getData() {
         var xml = new XMLHttpRequest();
