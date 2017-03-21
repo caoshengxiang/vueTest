@@ -1,7 +1,3 @@
-/**
- * Created by allen on 17-3-20.
- */
-
 var path = require('path');
 
 var OPTIONS = {
@@ -10,7 +6,7 @@ var OPTIONS = {
   },
   read: {
     name: '<<图片服务器(读取)>>',
-    port: 80,
+    port: 3001,
     'default': 'default.jpg',
     sizeReg: /(\w+)-(\d+)-(\d+)\.(\w+)$/
   },
@@ -29,11 +25,9 @@ var OPTIONS = {
 
 module.exports = function (rootDir, app) {
   app.set('rootDir', rootDir);
-
   var $ = require('underscore');
   $.each(OPTIONS, function (v, k) {
     app.set(k, typeof v === 'function' ? v(app) : v);
   });
-
   app.use(require('body-parser')())
 };
