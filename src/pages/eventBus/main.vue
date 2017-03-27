@@ -3,7 +3,7 @@
     <h1>event bus</h1>
     <div>
       <div class="a1">
-        <a1></a1>
+        <a1 :isPC="isPC"></a1>
       </div>
       <div class="a2">
         <a2></a2>
@@ -18,7 +18,9 @@
     name: 'main',
     props: {},
     data() {
-      return {}
+      return {
+          isPC: false
+      }
     },
     components: {
       a1,

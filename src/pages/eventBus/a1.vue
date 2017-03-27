@@ -8,7 +8,12 @@
   import bus from '../../bus/bus'
   export default {
     name: 'A1',
-    props: {},
+    props: {
+      isPC: {
+        type: Boolean,
+        default: true
+      }
+    },
     created() {
 
     },
