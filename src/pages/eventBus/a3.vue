@@ -1,17 +1,12 @@
 <template>
-
+  <div>
+    a3 {{show}}
+  </div>
 </template>
 <script>
   import bus from '../../bus/bus'
   export default {
     name: "a3",
-    render(createElement) {
-      return createElement(
-        <div>
-        a3 {{show}}
-    </div>
-      )
-    },
     data() {
       return {
         show: 'pre',
